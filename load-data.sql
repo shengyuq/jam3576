@@ -9,3 +9,7 @@ create table sales(
 	pricepaid decimal(8,2),
 	commission decimal(8,2),
 	saletime timestamp);
+
+copy sales from 'sales_tab.txt'
+iam_role default
+delimiter '\t' timeformat 'MM/DD/YYYY HH:MI:SS';
